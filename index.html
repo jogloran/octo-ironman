@@ -1,5 +1,44 @@
-<!doctype html> <html class="no-js"> <head> <meta charset="utf-8"> <title></title> <meta name="description" content=""> <meta name="viewport" content="width=device-width"> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <link rel="stylesheet" href="styles/vendor.7e033639.css"> <link rel="stylesheet" href="styles/main.23f01a43.css">  <body ng-app="fbLinkerApp" ng-controller="MainController"> <!--[if lt IE 7]>
+<!doctype html> <html class="no-js"> <head> <meta charset="utf-8"> <title></title> <meta name="description" content=""> <meta name="viewport" content="width=device-width"> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <link rel="stylesheet" href="styles/vendor.7e033639.css"> <link rel="stylesheet" href="styles/main.4b51aaac.css">  <body ng-app="fbLinkerApp" ng-controller="MainController"> <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]--> <!-- Add your site or application content here --> <div class="bk"> <nav class="navbar navbar-default" role="navigation" style="margin-bottom: 0" ng-hide="inSetup()"> <div class="container-fluid"> <div class="navbar-header"> <a href="#" class="navbar-brand">Composure</a> </div> </div> </nav> <div ui-view ng-class="{'full-height': !inSetup()}"></div> </div> <!--[if lt IE 9]>
+    <![endif]--> <!-- Add your site or application content here --> <div class="bk"> <div class="meny" style="background-color:#222"> <div class="list-group"> <li class="list-group-item"> <div class="list-group-item-text">Logged in as</div> <div class="list-group-item-text" style="word-break:break-all"><strong>daniel@getcomposure.com</strong></div> </li> <a class="list-group-item" ui-sref="setup.sources"><i class="fa fa-refresh fa-fw"></i> Reset</a> <a class="list-group-item" ui-sref="mail"><i class="fa fa-envelope fa-fw"></i> Mail</a> </div> <p style="color: #a8a8a8; text-align: center"> <i class="fa fa-heart"></i> Gradient Ascent </p> </div> <div class="meny-arrow"></div> <div class="contents" style="height: 100%"> <div ui-view style="height: 100%"></div> </div> </div> <!--[if lt IE 9]>
     <script src="scripts/oldieshim.ff90b0fb.js"></script>
-    <![endif]--> <script src="scripts/vendor.09efa711.js"></script> <script src="scripts/scripts.19fc32ab.js"></script>  
+    <![endif]--> <script src="scripts/vendor.09efa711.js"></script> <script src="scripts/scripts.988005c6.js"></script> <script>var meny = Meny.create({
+        // The element that will be animated in from off screen
+        menuElement: document.querySelector( '.meny' ),
+
+        // The contents that gets pushed aside while Meny is active
+        contentsElement: document.querySelector( '.contents' ),
+
+        // The alignment of the menu (top/right/bottom/left)
+        position: 'left',
+
+        // The height of the menu (when using top/bottom position)
+        height: 250,
+
+        // The width of the menu (when using left/right position)
+        width: 180,
+
+        // The angle at which the contents will rotate to.
+        angle: 0,
+
+        // The mouse distance from menu position which can trigger menu to open.
+        threshold: 40,
+
+        // Width(in px) of the thin line you see on screen when menu is in closed position.
+        overlap: 0,
+
+        // The total time taken by menu animation.
+        transitionDuration: '0.35s',
+
+        // Transition style for menu animations
+        transitionEasing: 'ease',
+
+        // Gradient overlay for the contents
+        gradient: 'rgba(0,0,0,0.20) 0%, rgba(0,0,0,0.65) 100%)',
+
+        // Use mouse movement to automatically open/close
+        mouse: true,
+
+        // Use touch swipe events to open/close
+        touch: true
+    });</script>  
